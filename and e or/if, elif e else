@@ -1,0 +1,16 @@
+renda = float(input("Digite o valor da sua renda mensal: "))
+parcela = float(input("Digite o valor da parcela desejada: "))
+
+limite_renda = 3000
+porcentual_max = 0.3
+if renda <=0 or parcela <=0:
+    print('apenas numeros positivos')
+else:
+    parcela_M = porcentual_max * renda
+    print(f'limite de parcela permitida: R$ {parcela_M:.2f}')
+    if renda < limite_renda:
+        print('emprestimo negado: renda baixa')
+    elif parcela > parcela_M:
+        print('emprestimo negado: parcela alta pro salario')
+    else:
+        print('aprovado, pode comemorar \o/')
